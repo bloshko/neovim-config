@@ -74,3 +74,6 @@ vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 -- Undotree
 -- open undotree
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+
+-- Tree
+vim.api.nvim_set_keymap("n", "<C-h>", ":NvimTreeFindFileToggle<cr>", { silent = true, noremap = true })
