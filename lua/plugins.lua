@@ -64,13 +64,7 @@ return require("packer").startup(function(use)
 	})
 	use("sbdchd/neoformat")
 	use("airblade/vim-gitgutter")
-	use({
-		"goolord/alpha-nvim",
-		requires = { "nvim-tree/nvim-web-devicons" },
-		config = function()
-			require("alpha").setup(require("alpha.themes.startify").config)
-		end,
-	})
+	use("mhinz/vim-startify")
 
 	-- want to try
 	-- use {'kevinhwang91/nvim-bqf', ft = 'qf'}
