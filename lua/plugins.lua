@@ -47,7 +47,6 @@ return require("packer").startup(function(use)
 	use({
 		"nvim-lualine/lualine.nvim",
 	})
-	use({ "echasnovski/mini.nvim", version = "*" })
 	use("f-person/git-blame.nvim")
 	use("karb94/neoscroll.nvim")
 	use("windwp/nvim-ts-autotag")
@@ -64,8 +63,15 @@ return require("packer").startup(function(use)
 		end,
 	})
 	use("sbdchd/neoformat")
+	use("airblade/vim-gitgutter")
+	use({
+		"goolord/alpha-nvim",
+		requires = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			require("alpha").setup(require("alpha.themes.startify").config)
+		end,
+	})
 
 	-- want to try
 	-- use {'kevinhwang91/nvim-bqf', ft = 'qf'}
-	-- use "nvim-lua/plenary.nvim"
 end)
