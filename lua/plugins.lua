@@ -65,7 +65,5 @@ return require("packer").startup(function(use)
 	use("sbdchd/neoformat")
 	use("airblade/vim-gitgutter")
 	use("mhinz/vim-startify")
-
-	-- want to try
-	-- use {'kevinhwang91/nvim-bqf', ft = 'qf'}
+	use({ "kevinhwang91/nvim-bqf", ft = "qf" })
 end)
