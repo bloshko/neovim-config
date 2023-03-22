@@ -65,6 +65,11 @@ vim.keymap.set("v", "<leader>y", '"+y')
 -- format the file
 vim.keymap.set("n", "<leader>f", ":Neoformat<CR>")
 
+-- 
+-- LSP
+vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
+
 --
 -- Fugitive
 -- open git fugitive
