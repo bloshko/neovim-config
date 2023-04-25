@@ -17,7 +17,13 @@ return require("packer").startup(function(use)
 		requires = { "nvim-treesitter/nvim-treesitter", opt = true },
 	})
 	use({ "rose-pine/neovim", as = "rose-pine" })
-	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
+	use({
+		"nvim-treesitter/nvim-treesitter",
+		run = ":TSUpdate",
+		requires = {
+			"JoosepAlviste/nvim-ts-context-commentstring",
+		},
+	})
 	use("mbbill/undotree")
 	use("tpope/vim-fugitive")
 	use({
@@ -56,12 +62,7 @@ return require("packer").startup(function(use)
 			require("nvim-autopairs").setup({})
 		end,
 	})
-	use({
-		"numToStr/Comment.nvim",
-		config = function()
-			require("Comment").setup()
-		end,
-	})
+	use("numToStr/Comment.nvim")
 	use("sbdchd/neoformat")
 	use("airblade/vim-gitgutter")
 	use("mhinz/vim-startify")

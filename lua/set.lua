@@ -1,6 +1,8 @@
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
+vim.opt.confirm = true
+
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
@@ -10,8 +12,13 @@ vim.opt.smartindent = true
 
 vim.opt.wrap = false
 
+vim.opt.titlestring = "%t"
+vim.opt.title = true
+
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 vim.opt.termguicolors = true
 
@@ -46,13 +53,13 @@ vim.keymap.set("n", "<leader>pg", builtin.live_grep, {})
 -- cursor word search
 vim.keymap.set("n", "<leader>wg", builtin.grep_string, {})
 -- search help files
-vim.keymap.set('n', '<leader>hg', builtin.help_tags, {})
+vim.keymap.set("n", "<leader>hg", builtin.help_tags, {})
 -- search git status
-vim.keymap.set('n', '<leader>sg', builtin.git_status, {})
+vim.keymap.set("n", "<leader>sg", builtin.git_status, {})
 -- search open buffers
-vim.keymap.set('n', '<leader>bg', builtin.buffers, {})
+vim.keymap.set("n", "<leader>bg", builtin.buffers, {})
 -- search registers
-vim.keymap.set('n', '<leader>rg', builtin.registers, {})
+vim.keymap.set("n", "<leader>rg", builtin.registers, {})
 
 --
 -- copy into clipboard
@@ -65,7 +72,7 @@ vim.keymap.set("v", "<leader>y", '"+y')
 -- format the file
 vim.keymap.set("n", "<leader>f", ":Neoformat<CR>")
 
--- 
+--
 -- LSP
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
 vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)

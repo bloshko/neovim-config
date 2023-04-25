@@ -24,6 +24,11 @@ require("nvim-treesitter.configs").setup({
 		enable = true,
 	},
 
+	context_commentstring = {
+		enable = true,
+		enable_autocmd = false,
+	},
+
 	-- Install parsers synchronously (only applied to `ensure_installed`)
 	sync_install = false,
 
